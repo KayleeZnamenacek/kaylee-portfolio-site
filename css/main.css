@@ -40,7 +40,7 @@
 *{
     font-family: 'Montserrat', sans-serif; 
     font-size: 1rem;
-    color: #707070;
+    color:#4d4d4d;
 }
 body{
     background-image: url(../img/bg-pattern@4x-100.jpg);
@@ -84,7 +84,8 @@ span{
   font-family: 'Montserrat', sans-serif; 
 	font-size: 1em;
 	margin: 0px 0px 10px 0px;
-	border: none;
+    border: none;
+    color: #808080;
   background-color: #DBEAE7;
 }
 
@@ -111,6 +112,7 @@ span{
 }
 input::placeholder, textarea::placeholder, .submit-button{
   text-transform: uppercase;
+  color: #808080;
 }
 
 
