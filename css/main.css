@@ -66,7 +66,7 @@ p {
 	font-size: 1em;
 	margin-bottom: 1rem;
 }
-span{
+.contact-form,.social{
   display: none;
 }
 
@@ -173,7 +173,27 @@ img[src="about.me@2x.png"]{
         width: auto;
     }
 }
-
+.orbit-slide{
+    max-height: 50vh;
+}
+.orbit-previous, .orbit-next{
+    color: #018589;
+    background-color: #cfcfcf;
+}
+.orbit-previous:hover, .orbit-next:hover{
+    color: #018589;
+    background-color:#DBEAE7;
+}
+.orbit-previous:active, .orbit-next:active{
+    color: #018589;
+    background-color:#DBEAE7;
+}
+.orbit-bullets button{
+    background-color:#cfcfcf;
+}
+.orbit-bullets button.is-active{
+    background-color: #019589;
+}
 /*--------------------------------------------------------------
 5.0 - OBJECTS 
 -------------------------------------------------------------- */
@@ -197,7 +217,15 @@ img[src="about.me@2x.png"]{
 
 
 /* BUTTONS */
+.button-previous, .button-next{
+    color: #018589;
+   font-size: 5rem;
+   
+}
 
+.button-previous:hover, .button-next:hover{
+    color: #8872a4;
+}
 
 
 
