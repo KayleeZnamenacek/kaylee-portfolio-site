@@ -62,10 +62,6 @@ body{
 -------------------------------------------------------------- */
 /*FORMS*/
 
-p {
-	font-size: 1em;
-	margin-bottom: 1rem;
-}
 .contact-form,.social{
   display: none;
 }
@@ -74,18 +70,19 @@ p {
 
 #contact-area {
 	width: 1px;
-    margin-top: 25px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    clear: both;
+    width: 100%;
 }
 
 #contact-area input, #contact-area textarea {
 	padding: 5px;
-	width: 471px;
+	width: 100%
   font-family: 'Montserrat', sans-serif; 
 	font-size: 1em;
 	margin: 0px 0px 10px 0px;
     border: none;
-    color: #808080;
+    color: #015859;
   background-color: #DBEAE7;
 }
 
@@ -113,12 +110,11 @@ p {
 input::placeholder, textarea::placeholder, .submit-button{
   text-transform: uppercase;
   color: #808080;
+  font-weight: 500;
 }
 
 
-#contact-area {
-	width: 100%;
-}
+
 
 /* TYPOGRAPHY */
 h1,h2{
@@ -131,6 +127,15 @@ h2{
 .txt-center{
     text-align: center;
 }
+
+p {
+	font-size: 1em;
+	margin-bottom: 1rem;
+}
+.navigation{
+    margin-bottom: 1rem;
+}
+
 /* Lists */
 li{
     display: inline-block;
@@ -146,27 +151,28 @@ ul{
 
 
 /* Media */
-header{
+.hero{
     background-image: url(../img/background-squiggle@2x.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 50%;
-    padding-top: 1rem;  
+    height: 50vh; 
 }
-@media only screen and (min-width:768px){
-    header{
-        height: 90vh; 
+@media only screen and (min-width: 768px){
+   .hero{
+       height: 90vh;
     }
 }
+
 img[src="img/favicon-logo400.png"]{
     width:20%;
 }
 img[src="img/hello@2x.png"]{
     width: 50%;
 }
-img[src="about.me@2x.png"]{
-    width:2%;
+img[src="img/about-me.svg"]{
+    width: 40%;
+    margin-bottom: .8rem;
 }
 @media only screen and (min-width: 768px){
     img[src="img/hello@2x.png"]{
@@ -178,15 +184,19 @@ img[src="about.me@2x.png"]{
 }
 .orbit-previous, .orbit-next{
     color: #018589;
-    background-color: #cfcfcf;
+    background-color:transparent;
 }
 .orbit-previous:hover, .orbit-next:hover{
-    color: #018589;
-    background-color:#DBEAE7;
+    color: #808080;
+    background-color: transparent;
 }
 .orbit-previous:active, .orbit-next:active{
     color: #018589;
-    background-color:#DBEAE7;
+    background-color: transparent;
+}
+.orbit-previous:hover, .orbit-next:hover, .orbit-previous:active, .orbit-next:active, .orbit-previous:focus, .orbit-next:focus {
+    background-color: transparent; 
+    color: #cfcfcf;
 }
 .orbit-bullets button{
     background-color:#cfcfcf;
@@ -194,6 +204,10 @@ img[src="about.me@2x.png"]{
 .orbit-bullets button.is-active{
     background-color: #019589;
 }
+.orbit-bullets button:hover{
+    color:#808080;
+}
+
 /*--------------------------------------------------------------
 5.0 - OBJECTS 
 -------------------------------------------------------------- */
@@ -211,21 +225,9 @@ img[src="about.me@2x.png"]{
 -------------------------------------------------------------- */
 
 /*-- HEADER --*/
-.navigation, #contact{
-    margin-bottom: 5rem;
-}
 
 
 /* BUTTONS */
-.button-previous, .button-next{
-    color: #018589;
-   font-size: 5rem;
-   
-}
-
-.button-previous:hover, .button-next:hover{
-    color: #8872a4;
-}
 
 
 
@@ -239,11 +241,15 @@ a{
    color:#707070;
    font-weight: 500;
 }
-a:hover,.fa-instagram:hover, .fa-linkedin:hover{
+.fa-angle-left, .fa-angle-right, .fa-angle-up{
+    color: #018589;
+}
+a:hover,.fa-instagram:hover, .fa-linkedin:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
     color: #8872a4;
 }
-
-
+.button-back-to-top{
+    text-align: center;
+}
 /*-- sprites --*/
 i{
     vertical-align: middle; 

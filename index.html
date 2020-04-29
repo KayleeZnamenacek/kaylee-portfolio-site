@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body id="back-to-top">
     <!--HEADER/HERO-->
-    <header id="back-to-top">
-      <div class="grid-container">
-      <div class="grid-x navigation">
+    <div class="hero">
+    <header class="grid-container">
+      <div class="grid-x grid-padding-x grid-padding-y navigation">
         <div class="cell medium-8">
           <a href="index.html"><img src="img/favicon-logo400.png"></a>
         </div>
@@ -29,6 +29,9 @@
           </ul>
         </nav>
       </div>
+      </header>
+    </header>
+    <div class="grid-container">
       <div class="grid-x"><!--hero-->
         <div class="cell small-12 txt-center">
         <h1><img src="img/hello@2x.png" alt="hello!"></h1>
@@ -36,55 +39,57 @@
       </div>
      </div>
     </div>
-    </header>
+  </div>
+    
+   
   
     <section class="grid-container">
       <section id="work">  <!--WORK/PROJECTS-->
         <div class="grid-x grid-padding-x grid-padding-y"><!--row 1-->
-        <div class="cell small-6 large-3"><!--project 1-->
+        <div class="cell small-6 medium-3"><!--project 1-->
           <a href="promotional.html"><img src="https://via.placeholder.com/300x200"> </a>
         </div>
-        <div class="cell small-6 large-3"><!--project 2-->
+        <div class="cell small-6 medium-3"><!--project 2-->
           <img src="https://via.placeholder.com/300x200"> 
         </div>
-        <div class="cell small-6 large-3"><!--project 3-->
+        <div class="cell small-6 medium-3"><!--project 3-->
           <img src="https://via.placeholder.com/300x200"> 
         </div>
-        <div class="cell small-6 large-3"><!--project 4-->
+        <div class="cell small-6 medium-3"><!--project 4-->
           <img src="https://via.placeholder.com/300x200"> 
         </div>
       </div>
         <div class="grid-x grid-padding-x grid-padding-y"><!--row 2-->
-          <div class="cell small-6 large-3"><!--project 5-->
+          <div class="cell small-6 medium-3"><!--project 5-->
             <img src="https://via.placeholder.com/300x200"> 
           </div>
-          <div class="cell small-6 large-3"><!--project 6-->
+          <div class="cell small-6 medium-3"><!--project 6-->
             <img src="https://via.placeholder.com/300x200"> 
           </div>
-          <div class="cell small-6 large-3"><!--project 7-->
+          <div class="cell small-6 medium-3"><!--project 7-->
             <img src="https://via.placeholder.com/300x200"> 
           </div>
-          <div class="cell small-6 large-3"><!--project 8-->
+          <div class="cell small-6 medium-3"><!--project 8-->
             <img src="https://via.placeholder.com/300x200"> 
           </div>
         </div>
       </section>
     <!--about me-->
     <section id="about" class="grid-x grid-padding-x grid-padding-y">
-      <div class="cell large-6">
-        <img src="img/about.me@2x.png" alt="about me"><!--heading-->
+      <div class="cell small-12 medium-6">
+        <img src="img/about-me.svg" alt="about me"><!--heading-->
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet consectetur adipiscing elit ut aliquam purus. Donec ultrices tincidunt arcu non sodales neque. Fusce ut placerat orci nulla pellentesque dignissim enim.</p>
       </div>
-      <div class="cell large-6">
+      <div class="cell small-12 medium-6">
         <img src="img/kaylee.about-me@2x.png">
       </div>
     </section>
     <!--contact form-->
-    <div id="contact page-wrap" class="grid-x grid-padding-x">
+    <div id="contact page-wrap" class="grid-x grid-padding-x grid-padding-y">
       <div class="cell small-12">
         <h2> Let's  work together!</h2>
       </div>
-      <div class="cell small-12 large-6"><!--form-->
+      <div class="cell small-12 medium-6"><!--form-->
         <div id="contact-area">
 			
           <form method="post" action="contactengine.php">
@@ -100,11 +105,11 @@
             <input type="submit" name="submit" value="Submit" class="submit-button" />
           </form>
           
-          <div style="clear: both;"></div>
+          <div style=""></div>
                   
         </div>
       </div>
-      <div class="cell small12- large-6"><!--social / email-->
+      <div class="cell small-12 medium-6"><!--social / email-->
         <p> Let’s talk about your next project, your favorite songs, and exchange cat pictures of our cats.</p>
         <a href="mailto:kayleeznamenacek@gmail.com">kayleeznamenacek@gmail.com</a>
         <ul>
@@ -113,8 +118,8 @@
         </ul> 
     </div>
     </div>
-    <div>
-      <a href="#back-to-top" ></a>
+    <div class="cell small-12 button-back-to-top">
+      <a href="#back-to-top"><i class="fas fa-angle-up fa-5x"></i></a>
     </div>
     <!--back to top button!-->
     </section>
