@@ -286,7 +286,7 @@ a{
 .fa-angle-left, .fa-angle-right, .fa-angle-up{
     color: #018589;
 }
-a:hover,.fa-instagram:hover, .fa-linkedin:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
+a:hover,.fa-instagram-square:hover, .fa-linkedin:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
     color: #8872a4;
 }
 .button-back-to-top{
