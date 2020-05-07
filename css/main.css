@@ -99,8 +99,14 @@ body{
     padding: .7rem;
     background-color: #018589;
     color: #FFF;
+   
 }
-#contact-area input.submit-button:hover{
+@media only screen and (min-width: 640px){
+  #contact-area input.submit-button {
+width: 20%;
+  }
+}
+  #contact-area input.submit-button:hover{
     background-color: #8872a4;
 }
 #message{
@@ -118,7 +124,12 @@ input::placeholder, textarea::placeholder, .submit-button{
 /* TYPOGRAPHY */
 
 h2{
-    text-align: center;
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase ;
+    padding: 0;
+    margin-top: 2rem;
 }
 .txt-center{
     text-align: center;
@@ -135,6 +146,11 @@ nav{
     text-align: right;
 }
 
+footer p{
+  margin-block-end: 0;
+  color: #DBEAE7;
+  text-transform: uppercase;
+}
 /* Lists */
 li{
     display: inline-block;
@@ -145,7 +161,9 @@ li{
 ul{
     margin: 0;
 }
-
+span{
+  display: none;
+}
 
 /* Media */
 .hero{
@@ -165,8 +183,8 @@ ul{
 }
 
 
-img[src="img/favicon-logo400.png"]{
-    width:20%;
+img[src="img/kaylee.logo.png"]{
+    width:80%;
 }
 img[src="img/hello.svg"]{
     width: 50%;
@@ -175,10 +193,22 @@ img[src="img/hello.svg"]{
     img[src="img/hello.svg"]{
         width: 30%;
     }
+    img[src="img/kaylee.logo.png"]{
+      width: 25%;
+    }
+  } 
+    @media only screen and (min-width: 641px){
+      img[src="img/kaylee.logo.png"]{
+        width: 15%;
+  }
 }
-img[src="img/about-me.svg"],img[src="img/lets-work-together.svg"]{
-    margin-bottom: .8rem;
+img[src="img/about-me.svg"]{
+    margin-bottom: 1rem;
 }
+img[src="img/lets-work-together.svg"]{
+  margin-bottom: .8rem;
+}
+
 img[src="img/about-me.svg"]{
     width: 60%;
 }
@@ -189,53 +219,73 @@ img[src="img/lets-work-together.svg"]{
     width: 70%;
 }
 @media only screen and (min-width: 640px){
-    img[src="img/about-me.svg"], img[src="img/lets-work-together.svg"], .project-titles{
+
+   img[src="img/about-me.svg"], img[src="img/lets-work-together.svg"], .project-titles{
         width: 40%;
     }
 }
-
-.orbit-slides-container{
-    height: 100% !important;
+@media only screen and (min-width: 640px){
+  img[src="img/promo-poster1.jpg"]{  
+  width: 50%;
 }
 
-.orbit-container .orbit-slides-container li.active{
-    position:relative;
+
+/*img overlay*/
+
+.container {
+  position: relative;
+  width: 50%;
 }
 
-.orbit-slide{
-    max-height: 50vh;
+.img-hover{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 80%;
+  transition: .8s ease;
+  background-image: url(../img/home-img-overlay.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.orbit-previous, .orbit-next{
-    color: #018589;
-    background-color:transparent;
+.container:hover .overlay {
+  opacity: 0%;
+  background-color: #B7D3D7;
 }
-.orbit-previous:hover, .orbit-next:hover{
-    color: #808080;
-    background-color: transparent;
+.text {
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 900;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-.orbit-previous:active, .orbit-next:active{
-    color: #018589;
-    background-color: transparent;
-}
-.orbit-previous:hover, .orbit-next:hover, .orbit-previous:active, .orbit-next:active, .orbit-previous:focus, .orbit-next:focus {
-    background-color: transparent; 
-    color: #cfcfcf;
-}
-.orbit-bullets{
-  float: none;
-  padding: 0;
-}
-.orbit-bullets button{
-    background-color:#cfcfcf;
-}
-.orbit-bullets button.is-active{
-    background-color: #019589;
-}
-.orbit-bullets button:hover{
-    color:#808080;
-}
+/*@media only screen and (max-width: 1024px){
+  .overlay{
+    display: none;
+  }
+}*/
 
+@media (hover: hover) and (pointer: fine) {
+  .option.hover:hover {
+    transform: translate(-6px, -6px);
+  }
+}
 /*--------------------------------------------------------------
 5.0 - OBJECTS 
 -------------------------------------------------------------- */
@@ -246,11 +296,17 @@ img[src="img/lets-work-together.svg"]{
 #about{ 
    margin: 6rem 0;
 }
+.next-previous{
+  margin-top: 2rem;
+}
 
 @media only screen and (max-width: 640px){
     .grid-container{
     max-width: 30rem;
 }
+  .next-previous{
+    margin-top: 4rem;
+  }
 }
 @media only screen and (min-width: 641px){
     .grid-container{
@@ -286,172 +342,17 @@ a{
 .fa-angle-left, .fa-angle-right, .fa-angle-up{
     color: #018589;
 }
-a:hover,.fa-instagram-square:hover, .fa-linkedin:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
+a:hover,.fa-instagram-square:hover, .fa-linkedin:hover, .fa-behance-square:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
     color: #8872a4;
 }
 .button-back-to-top{
     text-align: center;
 }
 
-/*--hamburger nav--*/
 
-.navigation {
-  height: 6rem;
-  
-}
-
-/*Logo and branding*/
-.brand {
-  position: absolute;
-  padding-left: 2rem;
-  float: left;
-  line-height: 5rem;
-  text-transform: uppercase;
-  font-size: 1.4em;
-}
- header a, header a:visited {
-    color: #707070;
-    text-decoration: none;
-  }
-
-
-/*Container with no padding for navbar*/
-.nav-container {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-/* Navigation */
-header nav {
-  float: right;
-}
-header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-header li {
-      float: left;
-      position: relative;
-    }
-
-header nav a, header nav a:visited {
-        display: block;
-        /*padding: 0 20px;*/
-        line-height: 6rem;
-        background:transparent;
-        color:gray;
-        text-decoration: none;
-}
-header nav a:hover {
-          background: transparent;
-          color: purple;
-        }
-header nav a:not(:only-child):after {
-          padding-left: 4px;
-          content: ' ▾';
-        }
-
-
-/* Dropdown list binds to JS toggle event*/
-
-/* Mobile navigation */
-
-/*Binds to JS Toggle*/
-.nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: gray;
-  height: 6rem;
-  width: 6rem;
-}
-@media only screen and (max-width: 798px) {
-  /* Hamburger nav visible on mobile only*/
-  .nav-mobile {
-    display: block;
-  }
-.nav-mobile nav {
-   width: 100%;
-    padding: 6rem 0 2rem; 
-  }
-.nav-mobile ul {
-      display: none; 
-    }
-.nav-mobile li {
-        float: none;
-      }
-
- .nav-mobile a {
-          padding: 1rem 2rem;
-          line-height: 1em;
-        }
-        .nav-mobile ul li a {
-          padding-left: 2rem;
-        }
-  
-  .nav-dropdown {
-    position: static;
-  }
-}
-@media screen and (min-width: 640px) {
-  .nav-list {
-    display: block !important;
-  }
-}
-#nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-}
-
-  span,
-  span:before,
-  span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 35px;
-    background: white;
-    position: absolute;
-    display: block;
-    content: '';
-    transition: all 300ms ease-in-out;
-  }
-  span:before {
-    top: -10px;
-  }
-  span:after {
-    bottom: -10px;
-  }
-span.active span {
-    background-color: transparent;
-  }
-   #nav-toggle:before,
-    #nav-toggle:after {
-      top: 0;
-    }
-    #nav-toggle:before {
-      transform: rotate(45deg);
-    }
-    #nav-toggle:after {
-      transform: rotate(-45deg);
-    }
- 
-
-/*Page content */
-article {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
-}
 
 /*-- sprites --*/
-i{
+i, img[src="img/kaylee.about-me@2x.png"]{
     vertical-align: middle; 
 }
 
@@ -462,8 +363,9 @@ i{
 -------------------------------------------------------------- */
 
 /*-- COLOR --*/
-html{
-    border-bottom: #018589 2rem solid;
+footer{
+  background-color: #018589 ;
+  padding: .5rem;
    
 }
 
