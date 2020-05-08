@@ -41,6 +41,7 @@
     font-family: 'Montserrat', sans-serif; 
     font-size: 1rem;
     color:#4d4d4d;
+    line-height: 1.5em;
 }
 body{
     background-image: url(../img/bg-pattern@4x-100.jpg);
@@ -101,9 +102,9 @@ body{
     color: #FFF;
    
 }
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 740px){
   #contact-area input.submit-button {
-width: 20%;
+width: 30%;
   }
 }
   #contact-area input.submit-button:hover{
@@ -130,6 +131,7 @@ h2{
     text-transform: uppercase ;
     padding: 0;
     margin-top: 2rem;
+    color: #707070; 
 }
 .txt-center{
     text-align: center;
@@ -164,8 +166,35 @@ ul{
 span{
   display: none;
 }
+a{
+  color:#707070;
+  font-weight: 500;
+}
+/*below styles within list section only work this high up in css*/
+nav li a{
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
+
+.fa-angle-left, .fa-angle-right, .fa-angle-up{
+  color: #018589;
+}
+a:hover,.fa-instagram-square:hover, .fa-linkedin:hover, .fa-behance-square:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
+  color: #8872a4;
+}
+.button-back-to-top{
+  text-align: center;
+}
+
+footer{
+  background-color: #018589;
+  padding: 1rem;
+  }
 /* Media */
+
+
+
 .hero{
     background-image: url(../img/bg-squiggle.svg);
     background-repeat: no-repeat;
@@ -177,12 +206,19 @@ span{
 }
 @media only screen and (min-width: 768px){
    .hero{
-       height: 50vh;
+       height: 40vh;
        margin-bottom: 4rem;
     }
 }
-
-
+@media only screen and (min-width: 1900px){
+  .hero{
+      height: 80vh;
+      margin-bottom: 4rem;
+   }
+}
+img[src="img/heading-hiwaydiner.svg"]{
+  width: 90%
+}
 img[src="img/kaylee.logo.png"]{
     width:80%;
 }
@@ -205,12 +241,15 @@ img[src="img/hello.svg"]{
 img[src="img/about-me.svg"]{
     margin-bottom: 1rem;
 }
+/*img[src="img/kaylee.about-me.jpg"]{
+  height: 90%;
+}*/
 img[src="img/lets-work-together.svg"]{
   margin-bottom: .8rem;
 }
 
 img[src="img/about-me.svg"]{
-    width: 60%;
+    width: 90%;
 }
 img[src="img/lets-work-together.svg"]{
     width: 100%;
@@ -218,15 +257,24 @@ img[src="img/lets-work-together.svg"]{
 .project-titles{
     width: 70%;
 }
+
 @media only screen and (min-width: 640px){
 
-   img[src="img/about-me.svg"], img[src="img/lets-work-together.svg"], .project-titles{
-        width: 40%;
+   img[src="img/about-me.svg"], .project-titles{
+        width: 60%;
+    }
+    img[src="img/lets-work-together.svg"]{
+      width: 50%;
     }
 }
 @media only screen and (min-width: 640px){
   img[src="img/promo-poster1.jpg"]{  
   width: 50%;
+}
+@media (hover: hover) and (pointer: fine) {
+  .option.hover:hover #works {
+    transform: translate(-6px, -6px) !important;
+  }
 }
 
 
@@ -250,42 +298,35 @@ img[src="img/lets-work-together.svg"]{
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 80%;
+  opacity: 0%;
   transition: .8s ease;
-  background-image: url(../img/home-img-overlay.svg);
+  background-color: ;
+  /*background-image: url(../img/home-img-overlay.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 .container:hover .overlay {
-  opacity: 0%;
-  background-color: #B7D3D7;
+  opacity: 95%;
+  background-color: #018589;
 }
 .text {
   font-family: 'Montserrat', sans-serif; 
   font-weight: 900;
+  text-align: center !important;
   color: white;
   font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.text p{
   text-align: center;
 }
-/*@media only screen and (max-width: 1024px){
-  .overlay{
-    display: none;
-  }
-}*/
 
-@media (hover: hover) and (pointer: fine) {
-  .option.hover:hover {
-    transform: translate(-6px, -6px);
-  }
-}
+
 /*--------------------------------------------------------------
 5.0 - OBJECTS 
 -------------------------------------------------------------- */
@@ -300,9 +341,10 @@ img[src="img/lets-work-together.svg"]{
   margin-top: 2rem;
 }
 
+
 @media only screen and (max-width: 640px){
     .grid-container{
-    max-width: 30rem;
+    max-width: 20rem;
 }
   .next-previous{
     margin-top: 4rem;
@@ -310,7 +352,7 @@ img[src="img/lets-work-together.svg"]{
 }
 @media only screen and (min-width: 641px){
     .grid-container{
-    max-width: 80rem;
+    max-width: 70rem;
 }
 }
 @media only screen and (min-width: 1900px){
@@ -331,31 +373,17 @@ img[src="img/lets-work-together.svg"]{
 
 /*-- NAVIGATION --*/
 
-nav li a{
-    font-weight: 700;
-    text-transform: uppercase;
-}
-a{
-   color:#707070;
-   font-weight: 500;
-}
-.fa-angle-left, .fa-angle-right, .fa-angle-up{
-    color: #018589;
-}
-a:hover,.fa-instagram-square:hover, .fa-linkedin:hover, .fa-behance-square:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
-    color: #8872a4;
-}
-.button-back-to-top{
-    text-align: center;
-}
+
 
 
 
 /*-- sprites --*/
-i, img[src="img/kaylee.about-me@2x.png"]{
-    vertical-align: middle; 
+i, img[src="img/kaylee.about-me.jpg"]{
+    vertical-align: center; 
 }
-
+i.fas.fa-angle-right.fa-3x,i.fas.fa-angle-left.fa-3x{
+  vertical-align: middle !important;
+}
 
 
 /*--------------------------------------------------------------
@@ -363,12 +391,6 @@ i, img[src="img/kaylee.about-me@2x.png"]{
 -------------------------------------------------------------- */
 
 /*-- COLOR --*/
-footer{
-  background-color: #018589 ;
-  padding: .5rem;
-   
-}
+
 
 /*-- ALIGNMENT --*/
-
-
