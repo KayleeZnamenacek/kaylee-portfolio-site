@@ -29,6 +29,10 @@
 <li>Montserrat</li>
 <li> Handwritten typography elements created by myself</li>
 </ul>
+<p>Icons</p>
+<ul>
+  <li>Font Awesome</li>
+ </ul>
 
 # License and Attribution
 <p>All Files and Images belong to Me ( Kaylee Znamenacek)</p>
