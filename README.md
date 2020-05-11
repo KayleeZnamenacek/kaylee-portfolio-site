@@ -12,8 +12,9 @@
 <li>package-line.steiner-kovarik.html</li>
 <li>paint-yourself-silly.publication.html</li>
 <li>promotional.html</li>
+  </ul>
 
-# Licesne and Attribution
+# License and Attribution
 <p>All Files and Images belong to Me ( Kaylee Znamenacek)</p>
 
 # Contact Me
