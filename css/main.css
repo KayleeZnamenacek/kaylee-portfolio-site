@@ -42,12 +42,14 @@
     font-size: 1rem;
     color:#4d4d4d;
     line-height: 1.5em;
+    scroll-behavior: smooth;
 }
 body{
     background-image: url(../img/bg-pattern@4x-100.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 
 /*--------------------------------------------------------------
@@ -131,6 +133,7 @@ h2{
     padding: 0;
     margin-top: 2rem;
     color:  #018589; 
+    margin-bottom: 0;
 }
 .txt-center{
     text-align: center;
@@ -175,8 +178,14 @@ li{
     margin-right: 1rem;
 }
 header nav li{
-  margin-left: 2rem;
+  margin-left: 1rem;
   text-align: right;
+}
+@media only screen and (min-width: 640px){
+
+  header nav li{
+    margin-left: .5rem;
+  }
 }
 @media only screen and (min-width: 947px){
 
@@ -237,10 +246,15 @@ img[src="img/heading-hiwaydiner.svg"]{
 	width: 70%;
 	height: auto;
 }
-.svg:hover {
+.social-svg{
+  width: 20%;
+}
+
+.svg:hover{
 	cursor: pointer;
   filter: invert(51%) sepia(10%) saturate(1377%) hue-rotate(224deg) brightness(92%) contrast(83%);
 }
+
 img[src="img/hello.svg"]{
     width: 50%;
 }
@@ -260,12 +274,7 @@ img[src="img/hello.svg"]{
 img[src="img/about-me.svg"]{
     margin-bottom: 2rem;
 }
-img[src="img/kaylee.about-me.jpg"]{
-  vertical-align: center; 
-}
-/*img[src="img/kaylee.about-me.jpg"]{
-  height: 90%;
-}*/
+
 img[src="img/lets-work-together.svg"]{
   margin-bottom: .8rem;
 }
@@ -277,7 +286,7 @@ img[src="img/lets-work-together.svg"]{
     width: 100%;
 }
 .project-titles{
-    width: 70%;
+    width: 90%;
 }
 
 @media only screen and (min-width: 640px){
@@ -286,18 +295,13 @@ img[src="img/lets-work-together.svg"]{
         width: 60%;
     }
     .project-titles{
-      width: 30%;
+      width: 50%;
     }
     img[src="img/lets-work-together.svg"]{
       width: 50%;
     }
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .option.hover:hover #works {
-    transform: translate(-6px, -6px) !important;
-  }
-}
 
 
 /*img overlay*/
@@ -306,7 +310,6 @@ img[src="img/lets-work-together.svg"]{
   position: relative;
   width: 50%;
 }
-
 .img-hover{
   display: block;
   width: 100%;
@@ -322,8 +325,7 @@ img[src="img/lets-work-together.svg"]{
   width: 100%;
   opacity: 0%;
   transition: .5s ease;
-  background-color: #018589 ;
-  /*background-image: url(../img/home-img-overlay.svg);
+  background-color: #018589;  /*background-image: url(../img/home-img-overlay.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;*/
@@ -331,23 +333,27 @@ img[src="img/lets-work-together.svg"]{
 
 .container:hover .overlay {
   opacity: 95%;
-  background-color: #018589;
+ 
 }
 .text {
   font-family: 'Montserrat', sans-serif; 
   font-weight: 900;
+  font-size: 1.2rem;
   text-align: center !important;
   color: white;
-  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.text p{
-  text-align: center;
-}
 
+@media (hover: hover) and (pointer: fine) {
+  .option.hover:hover{
+    transform: translate(-6px, -6px) !important;
+  }
+}
 
 /*--------------------------------------------------------------
 5.0 - OBJECTS 
@@ -359,6 +365,13 @@ img[src="img/lets-work-together.svg"]{
 #about{ 
    margin-top: 4rem;
    margin-bottom: 2rem;
+}
+.descriptions{
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.grid-container{
+  max-width: 30rem;
 }
 
 @media only screen and (min-width: 641px){
