@@ -12,8 +12,24 @@
 <li>package-line.steiner-kovarik.html</li>
 <li>paint-yourself-silly.publication.html</li>
 <li>promotional.html</li>
+</ul>
+<p> Foundation Version 6.5.1</p>
 
-# Licesne and Attribution
+# Colors / Styles
+<p>Colors</p>
+<ul>
+<li> #018589 - teal</li> 
+<li>#8872A4 - purple </li> 
+<li>#DBEAE7 - light blue</li>
+<li>707070 - grey</li>
+</ul>
+<p>Font</p>
+<ul>
+<li>Montserrat</li>
+<li> Handwritten typography elements created by myself</li>
+</ul>
+
+# License and Attribution
 <p>All Files and Images belong to Me ( Kaylee Znamenacek)</p>
 
 # Contact Me
