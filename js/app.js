@@ -1,24 +1,72 @@
-$(document).foundation()
-(function($) { // Begin jQuery
-    $(function() { // DOM ready
-      // If a link has a dropdown, add sub menu toggle.
-      $('nav ul li a:not(:only-child)').click(function(e) {
-        $(this).siblings('.nav-dropdown').toggle();
-        // Close one dropdown when selecting another
-        $('.nav-dropdown').not($(this).siblings()).hide();
-        e.stopPropagation();
-      });
-      // Clicking away from dropdown will remove the dropdown class
-      $('html').click(function() {
-        $('.nav-dropdown').hide();
-      });
-      // Toggle open and close nav styles on click
-      $('#nav-toggle').click(function() {
-        $('nav ul').slideToggle();
-      });
-      // Hamburger to X toggle
-      $('#nav-toggle').on('click', function() {
-        this.classList.toggle('active');
-      });
-    }); // end DOM ready
-  })(jQuery); // end jQuery
+(function($) {
+    $.fn.SmoothAnchors = function() {
+
+        function scrollBodyTo(destination, hash) {
+
+            // Change the hash first, then do the scrolling. This retains the standard functionality of the back/forward buttons.
+            var scrollmem = $(document).scrollTop();
+            window.location.hash = hash;
+            $(document).scrollTop(scrollmem);
+            $("html,body").animate({
+                scrollTop: destination
+            }, 700);
+
+        }
+
+        if (typeof $().on == "function") {
+            $(document).on('click', 'a[href^="#"]', function() {
+
+                var href = $(this).attr("href");
+
+                if ($(href).length == 0) {
+
+                    var nameSelector = "[name=" + href.replace("#", "") + "]";
+
+                    if (href == "#") {
+                        scrollBodyTo(0, href);
+                    }
+                    else if ($(nameSelector).length != 0) {
+                        scrollBodyTo($(nameSelector).offset().top, href);
+                    }
+                    else {
+                        // fine, we'll just follow the original link. gosh.
+                        window.location = href;
+                    }
+                }
+                else {
+                    scrollBodyTo($(href).offset().top, href);
+                }
+                return false;
+            });
+        }
+        else {
+            $('a[href^="#"]').click(function() {
+                var href = $(this).attr("href");
+
+                if ($(href).length == 0) {
+
+                    var nameSelector = "[name=" + href.replace("#", "") + "]";
+
+                    if (href == "#") {
+                        scrollBodyTo(0, href);
+                    }
+                    else if ($(nameSelector).length != 0) {
+                        scrollBodyTo($(nameSelector).offset().top, href);
+                    }
+                    else {
+                        // fine, we'll just follow the original link. gosh.
+                        window.location = href;
+                    }
+                }
+                else {
+                    scrollBodyTo($(href).offset().top, href);
+                }
+                return false;
+            });
+        }
+    };
+})(jQuery);
+
+$(document).ready(function() {
+    $().SmoothAnchors();
+});

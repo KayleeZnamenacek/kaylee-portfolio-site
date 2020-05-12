@@ -247,9 +247,6 @@ img[src="img/heading-hiwaydiner.svg"]{
 	width: 70%;
 	height: auto;
 }
-.social-svg{
-  width: 20%;
-}
 
 .svg:hover{
 	cursor: pointer;
@@ -289,7 +286,12 @@ img[src="img/lets-work-together.svg"]{
 .project-titles{
     width: 90%;
 }
-
+img[src="img/project-titles-PaintYourselfSilly.svg"]{
+  width: 70%;
+}
+img[src="img/project-titles-Steiner&Kovarik.svg"]{
+  width: 70%;
+}
 @media only screen and (min-width: 640px){
 
    img[src="img/about-me.svg"], .project-titles{
@@ -367,10 +369,7 @@ img[src="img/lets-work-together.svg"]{
    margin-top: 4rem;
    margin-bottom: 2rem;
 }
-.descriptions{
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
+
 .grid-container{
   max-width: 30rem;
 }
