@@ -125,7 +125,6 @@ input::placeholder, textarea::placeholder, .submit-button{
 /* TYPOGRAPHY */
 
 h2{
-    font-family: 'Montserrat', sans-serif;  
     font-weight: 900;
     font-size: 1.5rem;
     text-transform: uppercase ;
@@ -133,6 +132,14 @@ h2{
     margin-top: 2rem;
     color:  #018589; 
     margin-bottom: 0;
+}
+h2, h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+h3{
+  font-weight: 700;
+  text-align: center;
 }
 .txt-center{
     text-align: center;
@@ -307,7 +314,7 @@ img[src="img/project-titles-Steiner&Kovarik.svg"]{
 
 
 /*img overlay*/
-
+@media only screen and (min-width: 60em){ 
 .container {
   position: relative;
   width: 50%;
@@ -337,7 +344,7 @@ img[src="img/project-titles-Steiner&Kovarik.svg"]{
   opacity: 95%;
  
 }
-.text {
+.text p {
   font-family: 'Montserrat', sans-serif; 
   font-weight: 900;
   font-size: 1.2rem;
@@ -350,12 +357,15 @@ img[src="img/project-titles-Steiner&Kovarik.svg"]{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+}
 
-@media (hover: hover) and (pointer: fine) {
+/*@media (hover: hover) and (pointer: fine) {
   .option.hover:hover{
     transform: translate(-6px, -6px) !important;
   }
-}
+}*/
+
+  
 
 /*--------------------------------------------------------------
 5.0 - OBJECTS 
