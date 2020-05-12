@@ -9,7 +9,7 @@
             $(document).scrollTop(scrollmem);
             $("html,body").animate({
                 scrollTop: destination
-            }, 700);
+            }, 600);
 
         }
 

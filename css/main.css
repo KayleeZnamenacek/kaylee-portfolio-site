@@ -42,7 +42,6 @@
     font-size: 1rem;
     color:#4d4d4d;
     line-height: 1.5em;
-    scroll-behavior: smooth;
 }
 body{
     background-image: url(../img/bg-pattern@4x-100.jpg);
