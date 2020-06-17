@@ -50,7 +50,28 @@ body{
     background-size: cover;
     
 }
+/*.scrollable-element {
+  scrollbar-color: #018589 #88724a;
+}*/
+/* width */
+::-webkit-scrollbar {
+  width: .5rem;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #DBEAE7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8872a4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #018589;
+}
 /*--------------------------------------------------------------
 1.0 - SETTINGS
 -------------------------------------------------------------- */
@@ -433,7 +454,7 @@ nav li a{
 .fa-angle-left, .fa-angle-right, .fa-angle-up{
   color: #018589;
 }
-a:hover,.fa-instagram-square:hover, .fa-linkedin:hover, .fa-behance-square:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
+a:hover,.fa-facebook-square:hover, .fa-instagram-square:hover, .fa-linkedin:hover, .fa-behance-square:hover, .fa-angle-left:hover, .fa-angle-right:hover, .fa-angle-up:hover{
   color: #8872a4;
 }
 .button-back-to-top{
