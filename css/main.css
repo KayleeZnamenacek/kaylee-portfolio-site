@@ -145,7 +145,7 @@ input::placeholder, textarea::placeholder, .submit-button{
 
 /* TYPOGRAPHY */
 
-h1, h2{
+h1, h2, h3{
   font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 1.5rem;
@@ -155,7 +155,10 @@ h1, h2{
     color:  #018589; 
     margin-bottom: 0;
 }
-
+h3{
+  font-size: 1.2rem;
+  margin-top: 0;
+}
 .txt-center{
     text-align: center;
 }
@@ -170,7 +173,13 @@ p {
 nav{
     text-align: right;
 }
-
+#email{
+  color: #018589;
+  font-weight: 700;
+}
+#email:hover{
+  color: #8872a4;
+}
 footer p{
   margin-bottom: 0;
   color: #DBEAE7;
